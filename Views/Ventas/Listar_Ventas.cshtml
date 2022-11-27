@@ -1,0 +1,32 @@
+﻿@model List<VentaModel>
+@{
+    ViewData["Title"] = "Listar_Ventas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1>Lista De Ventas</h1>
+    </div>
+    <div class="card-body">
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Comentarios</th>
+                    <th>IdUsuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var venta in Model)
+                {
+                                <tr>
+                                            <td>@venta.Comentarios</td>
+                                            <td>@venta.IdUsuario</td>  
+                                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

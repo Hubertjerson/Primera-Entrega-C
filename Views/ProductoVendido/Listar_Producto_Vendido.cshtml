@@ -1,0 +1,34 @@
+﻿@model List<ProductoVendidoModel>
+@{
+    ViewData["Title"] = "Listar_Producto_Vendido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1>Lista De Producto Vendidos</h1>
+    </div>
+    <div class="card-body">
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>IdProducto</th>
+                    <th>IdVenta</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var prodVend in Model)
+                {
+                            <tr>
+                                <td>@prodVend.Stock</td>
+                                <td>@prodVend.IdProducto</td>  
+                                <td>@prodVend.IdVenta</td>  
+                            </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
